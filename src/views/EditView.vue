@@ -1,10 +1,15 @@
 <template>
-  {{ memo.title }}  
+  <MemoForm v-if="memo" :memo="memo" />  
+  <p v-else>指定されたメモはありません。</p>
 </template>
 
 <script>
+import MemoForm from '@/components/MemoFrom.vue'
 export default {
   name: 'EditView',
+  components: {
+    MemoForm
+  },
   computed: {
     memo () {
       const id = parseInt(this.$route.params.id)
