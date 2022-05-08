@@ -16,7 +16,7 @@ const routes = [
     component: NewView
   },
   {
-    path: '/edit',
+    path: '/edit/:id',
     name: 'edit',
     component: EditView
   },
